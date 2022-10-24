@@ -7,20 +7,21 @@
 2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
 3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
 4.0 - Elements: styling for bare/generic HTML elements 
-        - Typography: Headings, Paragraphs, Blockquotes, Anchors, Lists, Color
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors, Lists
+        - Content
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
-        - Header
-        - Navigation
-        - Flexbox
-        - Axis
-        - Container 
-        - Items
+        - Navigation 
+        - Button
         - Footer
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
-        
+        - Screenreader	
+        - Color    
+        - Margin
 --------------------------------------------------------------*/
+
+
 
 
 /*--------------------------------------------------------------
@@ -29,15 +30,7 @@
 
 /* ----- UNIVERSAL ----- */
 
-* {
-    font-family: 'Roboto Slab', serif;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #00515D;
-}
+
 
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
@@ -45,48 +38,19 @@
 
 /* ----- TYPOGRAPHY ----- */ 
 
-h1, 
-h2 {
-    font-family: 'Pacifico', cursive;
-    font-weight: 400;
-}
 
-h1,
-h2,
-h3 {
-    color: #00B0A3;
-    margin: 0;
-}
+/* ----- CONTENT ----- */
 
-h1,
-h1 + p {
-    text-align: center;
-}
 
-h1 {
-    font-size: 96px;
-}
 
-h2 {
-    font-size: 42px;
-    margin-bottom: 16px;
-}
+/* ----- LISTS ----- */
 
-h3 {
-    font-size: 20px;
-    font-weight: 700;
-}
 
-p {
-    font-size: 16px;
-    line-height: 28px;
-    margin: 5px 0;
-}
 
-i {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
+/* ----- ANCHOR ----- */
+
+
+
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -95,251 +59,61 @@ i {
 /* ----- FRAMEWORK ----- */
 
 .wrapper {
-    width: 1024px;
-    margin: 0 auto;
+        width: 1024px;
+        margin: 0 auto;
 }
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
 
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-/* ----- HEADER ----- */
-
-body > header {
-    padding: 30px 0;
-}
-
-header div div div {
-    width: 372px;
-    margin: 0 auto;
-}
-
-header div p {
-    font-size: 20px;
-    line-height: 35px;
-    margin: 5px 0 0;
-}
-
-header > div:last-child {
-    background-color: #FFD8DB;
- 
-}
-
-header div .wrapper {
-    background: url(../img/bg-header-balloons.jpg) left no-repeat;
-    -moz-background-size: contain;
-    -webkit-background-size: contain;
-    -o-backgroun-size: contain;
-    -ms-background-size: contain;
-    background-size: contain;
-    
-    padding: 95px 0 60px;
-    margin-top: 25px;
-}
-
-header .row div {
-    width: 100px;
-}
-
-
-/* ----- NAV ----- */
-
-header .row nav {
-    width: 360px;
-}
-
-header nav li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-nav ul {
-    padding: 0;
-}
-
-nav {
-    align-items: flex-end;
-    justify-content: space-between;
-    text-align: right;
-}
-
-nav li {
-    list-style-type: none;
-    }
-
-
-a {
-    text-decoration: none;
-    color: #00B0A3;
-    padding: 4px 8px;
-    font: 400 16px 'Open Sans', sans-serif;
-}
-
-a:hover {
-    background-color: #FFD8DB;
-    color: #003833;
-    border-radius: 16px;
-}
-
-
-/* ----- FLEXBOX ----- */
-
-#flexbox div:first-child {
-    width: 700px;
-    margin: 0 auto;
-}
-
-#flexbox .row {
-    margin-top: 80px;
-}
-
-#flexbox {
-    padding-top: 50px;
-    text-align: center;
-}
-
-#flexbox section {
-    width: 310px;
-}
-
-#flexbox section:last-child {
-    margin-right: 0;
-}
-
-/* ----- AXIS ----- */
-
-#axis {
-    padding-top: 100px;
-}
-
-#axis section:last-child h2 {
-    font-size: 36px;
-}
-
-#axis section:first-child {
-    width: 638px;
-}
-
-#axis .row {
-    margin-top: 40px;
-}
-
-#axis > section:last-child {
-    width: 347px;
-    background-color: #FFD8DB;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#axis .row section {
-    width: 309px;
-}
-
-
-/* ----- CONTAINER ----- */
-
-#container {
-    padding-top: 120px;
-}
-
-#container div:first-child {
-    width: 450px;
-}
-
-#container div:last-child {
-    width: 560px;
-    padding-left: 10px;
-}
-
-#container ul {
-    margin: 5px 0 40px;
-    padding: 0 0 0 29px;
-}
-
-#container li { 
-    line-height: 30px;
-}
-
-/* ----- ITEMS ----- */
-
-#items .row section {
-    width: 490px;
-}
-
-#items {
-    padding: 70px 0;
-}
-
-#items div {
-    margin-top: 40px;
-}
-
-#items > header {
-    margin: 0 auto;
-    text-align: center;
-    width: 700px
-}
-
-#items div .row div:first-child {
-    width: 40px;
-    margin-right: 40px;
-}
-
-#items div .row div:last-child {
-    width: 407px;
-}
-
-#items p:last-child {
-    margin-top: 30px;
-}
 
 /* ----- FOOTER ----- */
 
-footer,
-footer li {
-    margin-bottom: 20px;
-}
 
-footer ul,
-footer p {
-    margin: 0;
-    text-align: left;
-}
 
-footer {
-    border-top: 10px solid #FFD8DB;
-}
 
-footer > .row {
-    margin-top: 40px;
-    justify-content: flex-start;
-}
+/* ----- BUTTON ----- */
 
-footer .row section {
-    width: 300px;
-}
+/* ----- CONTENT ----- */
 
-footer .row nav {
-    width: 100px;
-}
-
-footer h4 {
-    margin: 5px 0 0;
-    font-size: 18px;
-}
-
-footer p {
-    font-size: 14px;
+#home-bg-hero {
+    background: url(../img/home-bg-hero.jpg) right no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    /* background-position: right -992px; */
 }
 
 
 
+
+
+
+/*--------------------------------------------------------------
+    7.0 - UTILITY
+-------------------------------------------------------------- */
+
+/* ----- SCREENREADER ----- */
+
+.sr-only {
+        position: absolute;
+          position: absolute !important;
+          width: 1px !important;
+          height: 1px !important;
+          padding: 0 !important;
+          margin: -1px !important;
+          overflow: hidden !important;
+          clip: rect(0,0,0,0) !important;
+          white-space: nowrap !important;
+          border: 0 !important;
+  }
+
+  /* ----- COLOR ----- */
+
+  
+  /* ----- UNIVERSAL ----- */
+
+ 
