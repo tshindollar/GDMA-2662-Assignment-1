@@ -76,9 +76,7 @@ i {
 -------------------------------------------------------------- */
 /* ----- HEADER ----- */
 
-header .row nav {
-    width: 360px;
-}
+
 
 header nav {
     align-items: flex-end;
@@ -129,12 +127,20 @@ footer .row {
     -o-backgroun-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-    /* background-position: right -992px; */
     height: 433px;
 }
 
 
-
+#home-woman {
+    background: url(../img/home-woman.jpg) 0 0 no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    width: 409px;
+    height: 405px;
+}
 
 
 
