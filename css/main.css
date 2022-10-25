@@ -38,7 +38,10 @@
 
 /* ----- TYPOGRAPHY ----- */ 
 
-
+i {
+    font-size: 50px;
+    color: #FE8360;
+}
 /* ----- CONTENT ----- */
 
 
@@ -63,13 +66,55 @@
         margin: 0 auto;
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+/* ----- HEADER ----- */
 
+header .row nav {
+    width: 360px;
+}
+
+header nav {
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: right;
+}
+
+/* ----- NAV ----- */
+
+
+
+header li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    }
+
+
+a {
+    text-decoration: none;
+}
+
+/* a:hover {
+
+} */
 
 /* ----- FOOTER ----- */
 
+footer .row {
+    justify-content: flex-start;
+}
 
 
 
@@ -85,6 +130,7 @@
     -ms-background-size: cover;
     background-size: cover;
     /* background-position: right -992px; */
+    height: 433px;
 }
 
 
