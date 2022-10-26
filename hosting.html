@@ -35,14 +35,59 @@
         </div>
         <div>
             <div class="wrapper">
-                <h1>Our Hosting</h1>
+                <h1><span>Our</span> Hosting</h1>
             </div>
         </div>
     </header>
 
     <main>
+        <section>
+            <div class="wrapper">
+                <header>
+                    <h2><i class="fa-solid fa-magnifying-glass"></i><br>
+                    <span>Search Your</span><br>Domain</h2>
+                </header>
+                
+
+                <form id="domain-search">
+
+                    <label class="sr-only" for="domain-name">Enter your domain name</label>
+                    <input type="text" name="domain-name" id="domain-name" placeholder="Enter your domain name" required>
+            
+                    <label for="years">Duration</label>
+                    <select name="duration" id="years" required>
+            
+                        <option value="" disabled selected>Year(0-1)</option>
+                    
+                        <option value="0-1 years">0-1 years</option>
+                        <option value="1-2 years">1-2 years</option>
+                        <option value="3-5 years">3-5 years</option>
+                        <option value="5+ years">5+ years</option>
+            
+                    </select>
+            
+                    <select name="url" id="url" required>
+            
+                        <option value="" disabled selected>.com</option>
+                    
+                        <option value=".com">.com</option>
+                        <option value=".org">.org</option>
+                        <option value=".net">.net</option>
+                        <option value=".gov">.gov</option>
+                        <option value=".edu">.edu</option>
+            
+                    </select>
+            
+                    <button type="search" form="domain-search">Search</button>
+            
+                </form>
+            </div>
+        </section>
+    
+
+    
         <table>
-            <caption>Domain Search</caption>
+            <caption class="sr-only">Domain Search</caption>
 
             <colgroup>
                 <col>
@@ -53,15 +98,10 @@
 
             <thead>
                 <tr>
-                    <th><b>$</b><span>5</span>per month</th>
-                    <th><b>$</b><span>7</span>per month</th>
-                    <th><b>$</b><span>9</span>per month</th>
-                </tr>
-                <tr>
-                    <td><a href="#basic-plan">Basic Plan</a></td>
-                    <td><a href="#standard-plan">Standard Plan</a></td>
-                    <td><a href="#pro-plan">Pro Plan</a></td>
-                    <td><a href="#premium-plan">Premium Plan</a></td>
+                    <th><b>$</b><span>5</span>per month<span>Basic Plan</span></th>
+                    <th><b>$</b><span>7</span>per month<span>Standard Plan<span></th>
+                    <th><b>$</b><span>9</span>per month<span>Pro Plan</span></th>
+                    <th><b>$</b><span>10</span>per month<span>Premium Plan</span></th>
                 </tr>
             </thead>
 

@@ -30,7 +30,17 @@
 
 /* ----- UNIVERSAL ----- */
 
+* {
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
+html {
+    font: 16px/25px 'Source Sans Pro', sans-serif;
+}
 
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
@@ -38,10 +48,27 @@
 
 /* ----- TYPOGRAPHY ----- */ 
 
+h1,
+h2,
+h3,
+#home-bg-hero p {
+    text-transform: uppercase;
+}
+
+h1 span {
+    font-size: 30px;
+    font-weight: 300;
+}
+
 i {
     font-size: 50px;
     color: #FE8360;
 }
+
+p {
+    margin: 0;
+}
+
 /* ----- CONTENT ----- */
 
 
@@ -142,7 +169,34 @@ footer .row {
     height: 405px;
 }
 
+/* ----- CLASSES AND IDS----- */
 
+.col-3 {
+    width: 360px;
+}
+
+
+#home-bg-hero p {
+    color: #fff;
+    font-size: 50px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+#home-bg-hero span {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#home-bg-hero div {
+    text-align: center;
+    padding-top: 273px;
+}
+
+h2 span {
+    font-weight: 300;
+    font-size: 18px;
+}
 
 /*--------------------------------------------------------------
     7.0 - UTILITY
