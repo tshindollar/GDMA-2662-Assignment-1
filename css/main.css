@@ -8,21 +8,19 @@
 3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
 4.0 - Elements: styling for bare/generic HTML elements 
         - Typography: Headings, Paragraphs, Blockquotes, Anchors, Lists
-        - Content
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
-        - Navigation 
-        - Button
+        - Hero
+        - Main
+        - Col3
+        - Form
+        - Table
         - Footer
+        - Content
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Screenreader	
-        - Color    
-        - Margin
 --------------------------------------------------------------*/
-
-
-
 
 /*--------------------------------------------------------------
     3.0 - GENERIC
@@ -47,8 +45,6 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
-/* ----- TYPOGRAPHY ----- */ 
-
 h1,
 h2,
 h3,
@@ -60,6 +56,13 @@ table a,
 thead th {
     text-transform: uppercase;
 }
+
+p,
+h3 {
+    margin: 0;
+}
+
+/* ----- TYPOGRAPHY ----- */ 
 
 h1 span {
     font-size: 30px;
@@ -73,29 +76,16 @@ h2 {
 h3 {
     color: #fff;
     padding: 50px 0 5px 0;
-    margin: 0; 
 }
+
+/* Am i allowed to group this color with the other #fff's in the components section? Same with the margin 0 and colors*/
 
 i {
     font-size: 50px;
     color: #FE8360;
 }
 
-p {
-    margin: 0;
-}
-
-/* ----- CONTENT ----- */
-
-
-
-/* ----- LISTS ----- */
-
-
-
-/* ----- ANCHOR ----- */
-
-
+/* Would only typography elements be up here or would any element that has font size be grouped here too? Like the group selectors i have in the components section for example? */
 
 
 /*--------------------------------------------------------------
@@ -117,18 +107,127 @@ p {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+header nav a,
+header nav ul,
+#bg-orange,
+main a,
+button {
+    background-color: #FE8360;
+} 
+
+header nav a,
+#home-bg-hero p,
+h1,
+main a,
+button,
+table span,
+footer a:hover,
+footer b {
+    color: #fff;
+}
+
+#home-bg-hero p,
+h1 {
+    font-size: 50px;
+    line-height: 43px;
+    font-weight: 700;
+}
+
+#bg-blue,
+table span {
+    background-color: #51CCF8;
+}
+
+header nav a:hover,
+main a:hover,
+button:hover {
+    background-color: #51CCF6;
+}
+
+
+#bg-blue,
+#bg-orange {
+    padding: 80px 0 25px;
+}
+
+header nav a,
+header li,
+button,
+tfoot a,
+table span,
+footer section:last-child li {
+    display: inline-block;
+}
+
+a,
+main a {
+    text-decoration: none;
+}
+
+button:hover,
+a,
+main a {
+    transition: 0.8s;
+}
+
+#home-bg-hero div,
+table,
+table span {
+    text-align: center;
+}
+
+main li,
+header nav a,
+main a,
+table span,
+button {
+    font-weight: 700;
+}
+
+h2 span,
+#home-bg-hero span {
+    font-weight: 300;
+}
+
+#opt-host p,
+thead th {
+    font-weight: 400;
+}
+
+h2 span,
+.col-3 h2 {
+    font-size: 18px;
+}
+
+button,
+table span {
+    font-size: 16px;
+}
+
+input,
+select
+footer ul {
+    font-size: 14px;
+}
+
+#home-woman,
+.col-3,
+footer {
+    margin-top: 70px;
+}
+
 /* ----- HERO ----- */
 
 header nav a {
-    color: #fff;
-    background-color: #FE8360;
     padding: 10px 18px;
-    font-weight: 700;
-    display: inline-block;
 }
 
 header a {
     color: #3F3C45;
+}
+
+header p a:hover {
+    color: #FE8360;
 }
 
 header p {
@@ -136,11 +235,10 @@ header p {
 }
 
 .margin-left p {
-    margin-left: 70px
+    margin-left: 70px;
 }
 
 header nav ul {
-    background-color: #FE8360;
     margin-bottom: 0;
     padding-left: 0;
 }
@@ -149,58 +247,16 @@ header .row div:last-child {
     padding-top: 52px;
 }
 
-header li {
-    display: inline-block;
-}
-
-#home-bg-hero p,
-h1 {
-    color: #fff;
-    font-size: 50px;
-    line-height: 43px;
-    font-weight: 700;
-}
-
 #home-bg-hero span {
     font-size: 30px;
-    font-weight: 300;
 }
 
 #home-bg-hero div {
-    text-align: center;
     padding-top: 273px;
-}
-
-h2 span {
-    font-weight: 300;
-    font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-    transition: 0.8s;
-}
-
-header nav a:hover {
-    background-color: #51CCF6;
-}
-
-#bg-blue {
-    background-color: #51CCF8;
-    padding: 80px 0 25px;
-}
-
-#bg-orange {
-    background-color: #FE8360;
-    padding: 80px 0 25px;
 }
 
 #act-on {
     padding-top: 33px;
-}
-
-header p a:hover {
-    color: #FE8360;
 }
 
 /* ----- MAIN ----- */
@@ -210,74 +266,33 @@ main ul {
     margin-bottom: 45px;
 }
 
-main li {
-    font-weight: 700;
-}
-
-#opt-host p {
-    font-weight: 400;
-}
-
-/* main header:first-of-type {
-    margin-top: 70px
-} */
-
 main #opt-host section {
     width: 500px;
 }
 
 main a {
-    color: #fff;
-    background-color: #FE8360;
     padding: 13px 18px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.8s;
-}
-
-main a:hover {
-    background-color: #51CCF6;
-
 }
 
 #home-woman i {
     position: absolute;
     top: -18px;
     left: -25px;
-
 }
-
-
-
 
 
 /* ----- COL3 ----- */
 
 .col-3 {
     width: 308px;
-    margin-top:70px;
-}
-
-.col-3 h2 {
-    font-size: 18px;
 }
 
 .col-3 i {
-    padding: 70px 30px 0 0;
+    padding: 16px 30px 0 0;
 }
-
 
 
 /* ----- FORM ----- */
-
-form {
-    padding: 84px 0 50px 0;
-    width: 820px;
-}
-
-h2 i {
-    font-size: 20px;
-}
 
 input,
 select {
@@ -290,33 +305,6 @@ select {
     border-radius: 0px;
 }
 
-button {
-    display: block;
-    background-color: #FE8360;
-    padding: 13px 30px;
-    border-radius: 0px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-    box-shadow: none;
-    border-style: hidden;
-    display: inline-block;
-    margin-left: 15px;
-}
-
-button:hover {
-    background-color: #51CCF6;
-    transition: 0.8s;
-}
-
-input {
-    width: 300px;
-    padding: 13px;
-    font-size: 14px;
-    color: #3F3C4580;
-}
-
-
 input[name="domain-name"]:focus,
 select:focus {
     border-color: #FE8360;
@@ -325,13 +313,34 @@ select:focus {
     outline: 0;
 }
 
+form {
+    padding: 84px 0 50px 0;
+    width: 820px;
+}
+
+h2 i {
+    font-size: 20px;
+}
+
+button {
+    padding: 13px 30px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-style: hidden;
+    margin-left: 15px;
+}
+
+input {
+    width: 300px;
+    padding: 13px;
+    color: #3F3C4580;
+}
+
 select {
     width: 174px;
     padding: 11px;
     margin-left: 15px;
-    font-size: 14px;
     color: #3F3C4580;
-
 }
 
 #bg-light-blue {
@@ -346,13 +355,18 @@ select {
 
 /* ----- TABLE ----- */
 
+tbody tr:first-child td,
+tfoot td {
+    border-top: 0px;
+}
+
+thead th,
+tbody tr:last-child td {
+    border-bottom: 0px;
+}
 
 table a {
     padding: 12px 50px;
-}
-
-table {
-    text-align: center;
 }
 
 td {
@@ -360,25 +374,16 @@ td {
 }
 
 thead th {
-    border-bottom: 0px;
     font-size: 25px;
-    font-weight: 400;
 }
 
 tbody tr:first-child td {
-    border-top: 0px;
     padding-top: 50px;
 }
  
 tbody tr:last-child td {
-    border-bottom: 0px;
     padding-bottom: 50px;
 }
-
-tfoot td {
-    border-top: 0px;
-}
-
 
 table, th, td {
     border: 1px solid #E0DFE1;
@@ -386,19 +391,11 @@ table, th, td {
 }
 
 table span {
-    background-color: #51CCF8;
     padding: 5px 40px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
     margin-top: 20px;
-
 }
 
 tfoot a {
-    display: inline-block;
     margin-bottom: 15px;
 }
 
@@ -416,11 +413,6 @@ footer .row {
 
 footer a {
     color:#B6BCC7;
-
-}
-
-footer a:hover  {
-    color:#fff
 }
 
 footer ul {
@@ -428,14 +420,11 @@ footer ul {
     padding: 0;
     font-style: normal;
     margin: 0;
-    font-size: 14px;
 }
 
 footer {
-    margin-top: 70px;
     padding-bottom: 70px;
     background-color: #4D515C;
-    
 }
 
 footer section {
@@ -443,12 +432,10 @@ footer section {
 }
 
 footer section:last-child li {
-    display: inline-block;
     padding-right: 22px;
 }
 
 footer b {
-    color: #fff;
     font-weight: 600;
     padding-right: 8px;
 }
@@ -476,12 +463,8 @@ footer b {
     background-size: cover;
     width: 409px;
     height: 405px;
-    margin-top: 70px;
     position: relative;
 }
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -503,9 +486,7 @@ footer b {
           border: 0 !important;
   }
 
-  /* ----- COLOR ----- */
 
   
-  /* ----- UNIVERSAL ----- */
 
  
