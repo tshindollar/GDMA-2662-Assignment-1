@@ -40,6 +40,7 @@
 
 html {
     font: 16px/25px 'Source Sans Pro', sans-serif;
+    color: #3F3C45;
 }
 
 /*--------------------------------------------------------------
@@ -51,13 +52,28 @@ html {
 h1,
 h2,
 h3,
-#home-bg-hero p {
+#home-bg-hero p,
+header nav a,
+button,
+span,
+table a,
+thead th {
     text-transform: uppercase;
 }
 
 h1 span {
     font-size: 30px;
     font-weight: 300;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    color: #fff;
+    padding: 50px 0 5px 0;
+    margin: 0; 
 }
 
 i {
@@ -101,39 +117,296 @@ p {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
-/* ----- HEADER ----- */
+/* ----- HERO ----- */
 
-
-
-header nav {
-    align-items: flex-end;
-    justify-content: space-between;
-    text-align: right;
+header nav a {
+    color: #fff;
+    background-color: #FE8360;
+    padding: 10px 18px;
+    font-weight: 700;
+    display: inline-block;
 }
 
-/* ----- NAV ----- */
+header a {
+    color: #3F3C45;
+}
 
+header p {
+    padding-bottom: 5px;
+}
 
+.margin-left p {
+    margin-left: 70px
+}
+
+header nav ul {
+    background-color: #FE8360;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+header .row div:last-child {
+    padding-top: 52px;
+}
 
 header li {
     display: inline-block;
-    margin-left: 20px;
 }
 
+#home-bg-hero p,
+h1 {
+    color: #fff;
+    font-size: 50px;
+    line-height: 43px;
+    font-weight: 700;
+}
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    }
+#home-bg-hero span {
+    font-size: 30px;
+    font-weight: 300;
+}
 
+#home-bg-hero div {
+    text-align: center;
+    padding-top: 273px;
+}
+
+h2 span {
+    font-weight: 300;
+    font-size: 18px;
+}
 
 a {
     text-decoration: none;
+    transition: 0.8s;
 }
 
-/* a:hover {
+header nav a:hover {
+    background-color: #51CCF6;
+}
 
+#bg-blue {
+    background-color: #51CCF8;
+    padding: 80px 0 25px;
+}
+
+#bg-orange {
+    background-color: #FE8360;
+    padding: 80px 0 25px;
+}
+
+#act-on {
+    padding-top: 33px;
+}
+
+header p a:hover {
+    color: #FE8360;
+}
+
+/* ----- MAIN ----- */
+
+main ul {
+    padding-left: 25px;
+    margin-bottom: 45px;
+}
+
+main li {
+    font-weight: 700;
+}
+
+#opt-host p {
+    font-weight: 400;
+}
+
+/* main header:first-of-type {
+    margin-top: 70px
 } */
+
+main #opt-host section {
+    width: 500px;
+}
+
+main a {
+    color: #fff;
+    background-color: #FE8360;
+    padding: 13px 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+main a:hover {
+    background-color: #51CCF6;
+
+}
+
+#home-woman i {
+    position: absolute;
+    top: -18px;
+    left: -25px;
+
+}
+
+
+
+
+
+/* ----- COL3 ----- */
+
+.col-3 {
+    width: 308px;
+    margin-top:70px;
+}
+
+.col-3 h2 {
+    font-size: 18px;
+}
+
+.col-3 i {
+    padding: 70px 30px 0 0;
+}
+
+
+
+/* ----- FORM ----- */
+
+form {
+    padding: 84px 0 50px 0;
+    width: 820px;
+}
+
+h2 i {
+    font-size: 20px;
+}
+
+input,
+select {
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+}
+
+button {
+    display: block;
+    background-color: #FE8360;
+    padding: 13px 30px;
+    border-radius: 0px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: none;
+    border-style: hidden;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+button:hover {
+    background-color: #51CCF6;
+    transition: 0.8s;
+}
+
+input {
+    width: 300px;
+    padding: 13px;
+    font-size: 14px;
+    color: #3F3C4580;
+}
+
+
+input[name="domain-name"]:focus,
+select:focus {
+    border-color: #FE8360;
+    border-width: 1px;
+    border-radius: 0px;
+    outline: 0;
+}
+
+select {
+    width: 174px;
+    padding: 11px;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #3F3C4580;
+
+}
+
+#bg-light-blue {
+    background-color: #E7F5F8;
+    margin-bottom: 70px; 
+}
+
+#bg-light-blue header {
+    padding-top: 10px;
+}
+
+
+/* ----- TABLE ----- */
+
+
+table a {
+    padding: 12px 50px;
+}
+
+table {
+    text-align: center;
+}
+
+td {
+    padding: 11px;
+}
+
+thead th {
+    border-bottom: 0px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+tbody tr:first-child td {
+    border-top: 0px;
+    padding-top: 50px;
+}
+ 
+tbody tr:last-child td {
+    border-bottom: 0px;
+    padding-bottom: 50px;
+}
+
+tfoot td {
+    border-top: 0px;
+}
+
+
+table, th, td {
+    border: 1px solid #E0DFE1;
+    border-collapse: collapse;
+}
+
+table span {
+    background-color: #51CCF8;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+
+}
+
+tfoot a {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* thead th:first-number{
+    font-size: 75px;
+} */
+
+/* figured there was no such thing as a first-number selector but it was worth a shot lol  */
 
 /* ----- FOOTER ----- */
 
@@ -141,9 +414,45 @@ footer .row {
     justify-content: flex-start;
 }
 
+footer a {
+    color:#B6BCC7;
 
+}
 
-/* ----- BUTTON ----- */
+footer a:hover  {
+    color:#fff
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    font-style: normal;
+    margin: 0;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 70px;
+    padding-bottom: 70px;
+    background-color: #4D515C;
+    
+}
+
+footer section {
+    padding-right: 100px;
+}
+
+footer section:last-child li {
+    display: inline-block;
+    padding-right: 22px;
+}
+
+footer b {
+    color: #fff;
+    font-weight: 600;
+    padding-right: 8px;
+}
+
 
 /* ----- CONTENT ----- */
 
@@ -167,36 +476,13 @@ footer .row {
     background-size: cover;
     width: 409px;
     height: 405px;
-}
-
-/* ----- CLASSES AND IDS----- */
-
-.col-3 {
-    width: 360px;
+    margin-top: 70px;
+    position: relative;
 }
 
 
-#home-bg-hero p {
-    color: #fff;
-    font-size: 50px;
-    line-height: 32px;
-    font-weight: 700;
-}
 
-#home-bg-hero span {
-    font-size: 30px;
-    font-weight: 300;
-}
 
-#home-bg-hero div {
-    text-align: center;
-    padding-top: 273px;
-}
-
-h2 span {
-    font-weight: 300;
-    font-size: 18px;
-}
 
 /*--------------------------------------------------------------
     7.0 - UTILITY
