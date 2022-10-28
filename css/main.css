@@ -8,16 +8,18 @@
 3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
 4.0 - Elements: styling for bare/generic HTML elements 
         - Typography: Headings, Paragraphs, Blockquotes, Anchors, Lists
+        - Form 
+        - Table
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
         - Hero
         - Main
+        - Body Image
         - Col3
         - Form
         - Table
         - Footer
-        - Content
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Screenreader	
 --------------------------------------------------------------*/
@@ -48,7 +50,6 @@ html {
 h1,
 h2,
 h3,
-#home-bg-hero p,
 header nav a,
 button,
 span,
@@ -57,12 +58,24 @@ thead th {
     text-transform: uppercase;
 }
 
-p,
-h3 {
+h3,
+p {
     margin: 0;
 }
 
+h1,
+h3,
+button {
+    color: #fff;
+}
+
 /* ----- TYPOGRAPHY ----- */ 
+
+h1 {
+    font-size: 50px;
+    line-height: 43px;
+    font-weight: 700;
+}
 
 h1 span {
     font-size: 30px;
@@ -74,19 +87,122 @@ h2 {
 }
 
 h3 {
-    color: #fff;
     padding: 50px 0 5px 0;
 }
-
-/* Am i allowed to group this color with the other #fff's in the components section? Same with the margin 0 and colors*/
 
 i {
     font-size: 50px;
     color: #FE8360;
 }
 
-/* Would only typography elements be up here or would any element that has font size be grouped here too? Like the group selectors i have in the components section for example? */
+a {
+    text-decoration: none;
+}
 
+button:hover,
+a {
+    transition: 0.8s;
+}
+
+button:hover {
+    background-color: #51CCF6;
+}
+
+button {
+    display: inline-block;
+    background-color: #FE8360;
+    font-weight: 700;
+}
+
+/* ----- FORM ----- */
+
+input,
+select {
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    font-size: 14px;
+}
+
+
+input[name="domain-name"]:focus,
+select:focus {
+    border-color: #FE8360;
+    border-width: 1px;
+    border-radius: 0px;
+    outline: 0;
+}
+
+form {
+    padding: 84px 0 50px 0;
+    width: 820px;
+}
+
+h2 i {
+    font-size: 20px;
+}
+
+form button {
+    padding: 13px 30px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-style: hidden;
+    margin-left: 15px;
+}
+
+input {
+    width: 300px;
+    padding: 13px;
+    color: #3F3C4580;
+}
+
+select {
+    width: 174px;
+    padding: 11px;
+    margin-left: 15px;
+    color: #3F3C4580;
+}
+
+/* ----- TABLE ----- */
+
+table {
+    text-align: center;
+}
+
+thead th {
+    font-size: 25px;
+    padding-top: 25px;
+}
+
+td {
+    padding: 11px;
+}
+
+table, th, td {
+    border: 1px solid #E0DFE1;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 0;
+}
+
+/* without the border-collapse i ended up having a double border on all of my td's  */
+
+table span {
+    padding: 5px 40px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #51CCF8;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -110,40 +226,22 @@ i {
 header nav a,
 header nav ul,
 #bg-orange,
-main a,
-button {
+main a {
     background-color: #FE8360;
 } 
 
 header nav a,
-#home-bg-hero p,
-h1,
+#bg-image p,
 main a,
-button,
-table span,
 footer a:hover,
 footer b {
     color: #fff;
 }
 
-#home-bg-hero p,
-h1 {
-    font-size: 50px;
-    line-height: 43px;
-    font-weight: 700;
-}
-
-#bg-blue,
-table span {
-    background-color: #51CCF8;
-}
-
 header nav a:hover,
-main a:hover,
-button:hover {
+main a:hover {
     background-color: #51CCF6;
 }
-
 
 #bg-blue,
 #bg-orange {
@@ -152,44 +250,23 @@ button:hover {
 
 header nav a,
 header li,
-button,
 tfoot a,
-table span,
 footer section:last-child li {
     display: inline-block;
 }
 
-a,
-main a {
-    text-decoration: none;
-}
-
-button:hover,
-a,
-main a {
-    transition: 0.8s;
-}
-
-#home-bg-hero div,
-table,
-table span {
-    text-align: center;
-}
-
 main li,
 header nav a,
-main a,
-table span,
-button {
+main a {
     font-weight: 700;
 }
 
 h2 span,
-#home-bg-hero span {
+#bg-image span {
     font-weight: 300;
 }
 
-#opt-host p,
+#body-sec-1 p,
 thead th {
     font-weight: 400;
 }
@@ -199,18 +276,11 @@ h2 span,
     font-size: 18px;
 }
 
-button,
-table span {
-    font-size: 16px;
-}
-
-input,
-select
 footer ul {
     font-size: 14px;
 }
 
-#home-woman,
+#body-image,
 .col-3,
 footer {
     margin-top: 70px;
@@ -234,8 +304,8 @@ header p {
     padding-bottom: 5px;
 }
 
-.margin-left p {
-    margin-left: 70px;
+#header-links {
+    text-align: right;
 }
 
 header nav ul {
@@ -247,17 +317,36 @@ header .row div:last-child {
     padding-top: 52px;
 }
 
-#home-bg-hero span {
+#bg-image span {
     font-size: 30px;
 }
 
-#home-bg-hero div {
+#bg-image div {
     padding-top: 273px;
+    text-align: center;
 }
 
-#act-on {
-    padding-top: 33px;
+#bg-image p {
+    text-transform: uppercase;
+    font-size: 50px;
+    line-height: 43px;
+    font-weight: 700;
 }
+
+#bg-image {
+    background: url(../img/bg-image.jpg) right no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 433px;
+}
+
+#bg-blue {
+    background-color: #51CCF8;
+}
+
 
 /* ----- MAIN ----- */
 
@@ -266,7 +355,7 @@ main ul {
     margin-bottom: 45px;
 }
 
-main #opt-host section {
+main #body-sec-1 section {
     width: 500px;
 }
 
@@ -274,7 +363,21 @@ main a {
     padding: 13px 18px;
 }
 
-#home-woman i {
+/* ----- BODY IMAGE ----- */
+
+#body-image {
+    background: url(../img/body-image.jpg) 0 0 no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    width: 409px;
+    height: 405px;
+    position: relative;
+}
+
+#body-image i {
     position: absolute;
     top: -18px;
     left: -25px;
@@ -288,60 +391,11 @@ main a {
 }
 
 .col-3 i {
-    padding: 16px 30px 0 0;
+    margin-right: 30px;
+    padding-top: 16px;
 }
-
 
 /* ----- FORM ----- */
-
-input,
-select {
-    border-style: solid;
-    border-width: 1px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -o-border-radius: 0px;
-    -ms-border-radius: 0px;
-    border-radius: 0px;
-}
-
-input[name="domain-name"]:focus,
-select:focus {
-    border-color: #FE8360;
-    border-width: 1px;
-    border-radius: 0px;
-    outline: 0;
-}
-
-form {
-    padding: 84px 0 50px 0;
-    width: 820px;
-}
-
-h2 i {
-    font-size: 20px;
-}
-
-button {
-    padding: 13px 30px;
-    border-radius: 0px;
-    box-shadow: none;
-    border-style: hidden;
-    margin-left: 15px;
-}
-
-input {
-    width: 300px;
-    padding: 13px;
-    color: #3F3C4580;
-}
-
-select {
-    width: 174px;
-    padding: 11px;
-    margin-left: 15px;
-    color: #3F3C4580;
-}
 
 #bg-light-blue {
     background-color: #E7F5F8;
@@ -352,58 +406,31 @@ select {
     padding-top: 10px;
 }
 
-
 /* ----- TABLE ----- */
 
-tbody tr:first-child td,
-tfoot td {
-    border-top: 0px;
+tbody tr:first-child td {
+    padding-top: 42px;
+    border-top: 0;
+}
+ 
+tbody tr:last-child td {
+    padding-bottom: 25px;
 }
 
-thead th,
-tbody tr:last-child td {
-    border-bottom: 0px;
+table b {
+    font-size: 75px;
+    line-height: 85px;
+}
+
+th:first-letter {
+    font-weight: 200;
+    font-size: 75px;
 }
 
 table a {
     padding: 12px 50px;
-}
-
-td {
-    padding: 11px;
-}
-
-thead th {
-    font-size: 25px;
-}
-
-tbody tr:first-child td {
-    padding-top: 50px;
-}
- 
-tbody tr:last-child td {
-    padding-bottom: 50px;
-}
-
-table, th, td {
-    border: 1px solid #E0DFE1;
-    border-collapse: collapse;
-}
-
-table span {
-    padding: 5px 40px;
-    margin-top: 20px;
-}
-
-tfoot a {
     margin-bottom: 15px;
 }
-
-/* thead th:first-number{
-    font-size: 75px;
-} */
-
-/* figured there was no such thing as a first-number selector but it was worth a shot lol  */
 
 /* ----- FOOTER ----- */
 
@@ -428,42 +455,16 @@ footer {
 }
 
 footer section {
-    padding-right: 100px;
+    margin-right: 100px;
 }
 
 footer section:last-child li {
-    padding-right: 22px;
+    margin-right: 22px;
 }
 
 footer b {
     font-weight: 600;
     padding-right: 8px;
-}
-
-
-/* ----- CONTENT ----- */
-
-#home-bg-hero {
-    background: url(../img/home-bg-hero.jpg) right no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size:cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 433px;
-}
-
-
-#home-woman {
-    background: url(../img/home-woman.jpg) 0 0 no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size:cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    width: 409px;
-    height: 405px;
-    position: relative;
 }
 
 

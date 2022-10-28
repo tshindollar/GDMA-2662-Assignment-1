@@ -20,9 +20,9 @@
     <header>
         <div class="wrapper row">
             <div>
-                <img src="img/Act-On-Logo.jpg" alt="Act-On" id="act-on">
+                <img src="img/act-on-logo.jpg" alt="Act-On" id="act-on">
             </div>
-            <div class="margin-left" >
+            <div id="header-links">
                 <p><b>Support: </b><a href="mailto:info@acton.com">info@acton.com</a> | <a href="#">login</a></p>
                 <nav>
                     <ul>
@@ -57,7 +57,7 @@
                     <label class="sr-only" for="years">Duration</label>
                     <select name="duration" id="years" required>
             
-                        <option value="" disabled selected>Year(0-1)</option>
+                        <option value="" disabled hidden selected>Year(0-1)</option>
                     
                         <option value="0-1 years">0-1 years</option>
                         <option value="1-2 years">1-2 years</option>
@@ -65,10 +65,11 @@
                         <option value="5+ years">5+ years</option>
             
                     </select>
-            
+
+                    <label class="sr-only" for="url">Url</label>
                     <select name="url" id="url" required>
             
-                        <option value="" disabled selected>.com</option>
+                        <option value="" disabled hidden selected>.com</option>
                     
                         <option value=".com">.com</option>
                         <option value=".org">.org</option>
@@ -88,14 +89,7 @@
     
         <table class="wrapper">
             <caption class="sr-only">Domain Search</caption>
-
-            <colgroup>
-                <col>
-                <col>
-                <col>
-                <col>
-            </colgroup>
-
+            
             <thead>
                 <tr>
                     <th>$<b>5</b><br>per month<br><span>Basic Plan</span></th>
@@ -140,10 +134,10 @@
 
             <tfoot>
                 <tr>
-                    <td><a href="#sign-up-form">SignUp</a></td>
-                    <td><a href="#sign-up-form">SignUp</a></td>
-                    <td><a href="#sign-up-form">SignUp</a></td>
-                    <td><a href="#sign-up-form">SignUp</a></td>
+                    <td><a href="#">SignUp</a></td>
+                    <td><a href="#">SignUp</a></td>
+                    <td><a href="#">SignUp</a></td>
+                    <td><a href="#">SignUp</a></td>
                 </tr>
             </tfoot>
         </table>
