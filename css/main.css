@@ -14,8 +14,8 @@
         - Framework
 6.0 - Components: specific designed components
         - Hero
-        - Main
         - Body Image
+        - Col2
         - Col3
         - Form
         - Table
@@ -50,7 +50,6 @@ html {
 h1,
 h2,
 h3,
-header nav a,
 button,
 span,
 table a,
@@ -69,6 +68,12 @@ button {
     color: #fff;
 }
 
+table, 
+#bg-image div {
+    text-align: center;
+}
+
+
 /* ----- TYPOGRAPHY ----- */ 
 
 h1 {
@@ -84,6 +89,10 @@ h1 span {
 
 h2 {
     font-size: 35px;
+}
+
+h2 span {
+    font-weight: 300;
 }
 
 h3 {
@@ -117,24 +126,39 @@ button {
 /* ----- FORM ----- */
 
 input,
-select {
-    border-style: solid;
+select,
+input[name="domain-name"]:focus,
+select:focus {
     border-width: 1px;
+}
+
+form button,
+input,
+select,
+input[name="domain-name"]:focus,
+select:focus {
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     -o-border-radius: 0px;
     -ms-border-radius: 0px;
     border-radius: 0px;
-    font-size: 14px;
 }
 
+input,
+select {
+    border-style: solid;
+    font-size: 14px;
+}
 
 input[name="domain-name"]:focus,
 select:focus {
     border-color: #FE8360;
-    border-width: 1px;
-    border-radius: 0px;
     outline: 0;
+}
+
+select,
+input {
+    color: #3F3C4580;
 }
 
 form {
@@ -148,7 +172,6 @@ h2 i {
 
 form button {
     padding: 13px 30px;
-    border-radius: 0px;
     box-shadow: none;
     border-style: hidden;
     margin-left: 15px;
@@ -157,41 +180,36 @@ form button {
 input {
     width: 300px;
     padding: 13px;
-    color: #3F3C4580;
 }
 
 select {
     width: 174px;
     padding: 11px;
     margin-left: 15px;
-    color: #3F3C4580;
 }
 
 /* ----- TABLE ----- */
 
+table b, 
+th::first-letter {
+    font-size: 75px;
+}
+
 table {
-    text-align: center;
+    border: 1px solid #E0DFE1;
+    border-collapse: collapse;
+
 }
 
 thead th {
     font-size: 25px;
     padding-top: 25px;
+    font-weight: 400;
 }
 
 td {
     padding: 11px;
 }
-
-table, th, td {
-    border: 1px solid #E0DFE1;
-    border-collapse: collapse;
-}
-
-th {
-    border-bottom: 0;
-}
-
-/* without the border-collapse i ended up having a double border on all of my td's  */
 
 table span {
     padding: 5px 40px;
@@ -199,9 +217,37 @@ table span {
     color: #fff;
     background-color: #51CCF8;
     display: inline-block;
-    text-align: center;
     font-weight: 700;
     font-size: 16px;
+}
+
+td, th {
+    border-right: 1px solid #E0DFE1;
+}
+
+tbody tr:not(:last-child) {
+    border-bottom: 1px solid #E0DFE1;
+}
+
+tbody tr:first-child td {
+    padding-top: 42px;
+}
+ 
+tbody tr:last-child td {
+    padding-bottom: 25px;
+}
+
+table b {
+    line-height: 85px;
+}
+
+th:first-letter {
+    font-weight: 200;
+}
+
+table a {
+    padding: 12px 50px;
+    margin-bottom: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -223,6 +269,7 @@ table span {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+
 header nav a,
 header nav ul,
 #bg-orange,
@@ -257,16 +304,13 @@ footer section:last-child li {
 
 main li,
 header nav a,
-main a {
+#col-2 a,
+#bg-image p,
+tfoot a {
     font-weight: 700;
 }
 
-h2 span,
-#bg-image span {
-    font-weight: 300;
-}
-
-#body-sec-1 p,
+#col-2 p,
 thead th {
     font-weight: 400;
 }
@@ -286,7 +330,14 @@ footer {
     margin-top: 70px;
 }
 
+
 /* ----- HERO ----- */
+
+header nav a,
+#bg-image p,
+#col-2 a {
+    text-transform: uppercase;
+}
 
 header nav a {
     padding: 10px 18px;
@@ -304,7 +355,7 @@ header p {
     padding-bottom: 5px;
 }
 
-#header-links {
+header .row p {
     text-align: right;
 }
 
@@ -313,33 +364,30 @@ header nav ul {
     padding-left: 0;
 }
 
+#logo {
+    padding-top: 34px;
+}
+
 header .row div:last-child {
     padding-top: 52px;
 }
 
 #bg-image span {
     font-size: 30px;
+    font-weight: 300;
 }
 
 #bg-image div {
     padding-top: 273px;
-    text-align: center;
 }
 
 #bg-image p {
-    text-transform: uppercase;
     font-size: 50px;
-    line-height: 43px;
-    font-weight: 700;
+    line-height: 32px;
 }
 
 #bg-image {
     background: url(../img/bg-image.jpg) right no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size:cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
     height: 433px;
 }
 
@@ -347,33 +395,11 @@ header .row div:last-child {
     background-color: #51CCF8;
 }
 
-
-/* ----- MAIN ----- */
-
-main ul {
-    padding-left: 25px;
-    margin-bottom: 45px;
-}
-
-main #body-sec-1 section {
-    width: 500px;
-}
-
-main a {
-    padding: 13px 18px;
-}
-
 /* ----- BODY IMAGE ----- */
 
 #body-image {
     background: url(../img/body-image.jpg) 0 0 no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size:cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
     width: 409px;
-    height: 405px;
     position: relative;
 }
 
@@ -383,6 +409,20 @@ main a {
     left: -25px;
 }
 
+/* ----- COL2 ----- */
+
+#col-2 ul {
+    padding-left: 25px;
+    margin: 0 0 45px
+}
+
+#col-2 a {
+    padding: 13px 18px;
+}
+
+main #col-2 section {
+    width: 500px;
+}
 
 /* ----- COL3 ----- */
 
@@ -395,6 +435,10 @@ main a {
     padding-top: 16px;
 }
 
+.col-3 h2 {
+    margin-bottom: 6px;
+}
+
 /* ----- FORM ----- */
 
 #bg-light-blue {
@@ -404,32 +448,6 @@ main a {
 
 #bg-light-blue header {
     padding-top: 10px;
-}
-
-/* ----- TABLE ----- */
-
-tbody tr:first-child td {
-    padding-top: 42px;
-    border-top: 0;
-}
- 
-tbody tr:last-child td {
-    padding-bottom: 25px;
-}
-
-table b {
-    font-size: 75px;
-    line-height: 85px;
-}
-
-th:first-letter {
-    font-weight: 200;
-    font-size: 75px;
-}
-
-table a {
-    padding: 12px 50px;
-    margin-bottom: 15px;
 }
 
 /* ----- FOOTER ----- */
@@ -467,6 +485,15 @@ footer b {
     padding-right: 8px;
 }
 
+#body-image,
+#bg-image {
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+
 
 /*--------------------------------------------------------------
     7.0 - UTILITY
@@ -486,8 +513,3 @@ footer b {
           white-space: nowrap !important;
           border: 0 !important;
   }
-
-
-  
-
- 
